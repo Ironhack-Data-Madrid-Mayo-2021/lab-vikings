@@ -14,6 +14,7 @@ class TestSoldier(unittest.TestCase):
     def testConstructorSignature(self):
         self.assertEqual(len(signature(Soldier).parameters), 2)
 
+
     def testHealth(self):
         self.assertEqual(self.soldier.health, self.health)
 
@@ -25,6 +26,7 @@ class TestSoldier(unittest.TestCase):
 
     def testAttackHasNoParams(self):
         self.assertEqual(len(signature(self.soldier.attack).parameters), 0)
+
 
     def testAttackRetunsStrength(self):
         self.assertEqual(self.soldier.attack(), self.strength)
